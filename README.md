@@ -10,14 +10,14 @@ Grab via Maven:
 <dependency>
   <groupId>me.giacoppo</groupId>
   <artifactId>mvp</artifactId>
-  <version>1.0.0</version>
+  <version>LATEST_VERSION</version>
   <type>pom</type>
 </dependency>
 ```
 
 or Gradle:
 ```groovy
-api 'me.giacoppo:mvp:1.0.0'
+api 'me.giacoppo:mvp:LATEST_VERSION'
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ Example:
 	}
 ```
 
-The library also includes base interfaces for Repository Pattern approach, base ThreadExecutor & PostExecutionThread instances
+The library also includes base interfaces for Repository Pattern approach, base ThreadExecutor & PostExecutionThread instances, default observer class
 
 ## License
     Copyright 2017 Giuseppe Giacoppo
