@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    apply from: './dependencies.gradle'
     ext.kotlin_version = '1.2.0'
     repositories {
         google()
@@ -10,6 +11,12 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
+
+}
+
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+    id "com.github.dcendents.android-maven" version "2.0"
 }
 
 allprojects {
@@ -18,7 +25,6 @@ allprojects {
         jcenter()
     }
 }
-
-task clean(type: Delete) {
+clean {
     delete rootProject.buildDir
 }
