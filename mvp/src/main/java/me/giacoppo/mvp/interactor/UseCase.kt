@@ -16,7 +16,7 @@ abstract class UseCase<T, in Params>(private val threadExecutor: ThreadExecutor,
     /**
      * Builds an [Observable] which will be used when executing the current [UseCase].
      */
-     abstract fun buildUseCaseObservable(params: Params): Observable<T>
+     abstract protected fun buildUseCaseObservable(params: Params): Observable<T>
 
     /**
      * Executes the current use case.
