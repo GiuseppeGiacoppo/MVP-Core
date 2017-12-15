@@ -56,6 +56,10 @@ Example:
 
 The library also includes base interfaces for Repository Pattern approach, base ThreadExecutor & PostExecutionThread instances, default observer class
 
+## Credits
+Android Clean Architecture: 
+https://github.com/android10/Android-CleanArchitecture
+
 ## License
     Copyright 2017 Giuseppe Giacoppo
     Licensed under the Apache License, Version 2.0 (the "License");
