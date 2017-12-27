@@ -36,7 +36,7 @@ Example:
 		}
 
 		@Override
-		protected Observable<Configuration> buildUseCaseObservable(Params params) {
+		protected Observable<Movie> buildUseCaseObservable(Params params) {
 			return repository.findMovies(params.category);
 		}
 
