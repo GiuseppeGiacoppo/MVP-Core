@@ -2,6 +2,9 @@ package me.giacoppo.mvp.repository
 
 import io.reactivex.Observable
 
+/**
+ * Default interface for repository pattern
+ */
 interface RepositoryPattern<T, S : Specification> {
     fun <X> add(item: T): Observable<X>
     fun <X> add(items: Iterable<T>): Observable<X>

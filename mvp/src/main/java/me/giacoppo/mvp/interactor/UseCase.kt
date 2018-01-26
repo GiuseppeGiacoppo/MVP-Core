@@ -9,7 +9,9 @@ import me.giacoppo.mvp.executor.PostExecutionThread
 import me.giacoppo.mvp.executor.ThreadExecutor
 import java.util.*
 
-
+/**
+ * Default use case class
+ */
 abstract class UseCase<T, in Params>(private val threadExecutor: ThreadExecutor, private val postExecutionThread: PostExecutionThread) {
     private val disposables: CompositeDisposable by lazy {  CompositeDisposable() }
 
@@ -31,6 +33,13 @@ abstract class UseCase<T, in Params>(private val threadExecutor: ThreadExecutor,
                 .subscribeOn(Schedulers.from(threadExecutor))
                 .observeOn(postExecutionThread.getScheduler())
         addDisposable(observable.subscribeWith(observer))
+    }
+
+    /**
+     * Clear current [CompositeDisposable].
+     */
+    fun clear() {
+        disposables.clear()
     }
 
     /**

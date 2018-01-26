@@ -2,7 +2,10 @@ package me.giacoppo.mvp.interactor
 
 import io.reactivex.observers.DisposableObserver
 
-class DefaultObserver<T> : DisposableObserver<T>() {
+/**
+ * Default observer with empty methods
+ */
+open class DefaultObserver<T> : DisposableObserver<T>() {
 
     override fun onNext(value: T) {
 
